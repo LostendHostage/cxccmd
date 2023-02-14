@@ -1,0 +1,24 @@
+return {
+	["speed"] = {
+		["Args"] = 1,
+		["Function"] = function(speaker, args)
+			local char = speaker.Character or speaker.CharacterAdded:Wait()
+
+			if char and char:FindFirstChild("Humanoid") then
+				char:FindFirstChild("Humanoid").WalkSpeed = args[1]
+			end
+		end,
+	},
+	["rhub"] = {
+		["Args"] = 0,
+		["Function"] = function(speaker, args)
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/LostendHostage/scripts/main/roblox-hub"))();
+		end,
+	},
+	["net"] = {
+		["Args"] = 0,
+		["Function"] = function(speaker, args)
+			loadstring(game:HttpGet("https://pastebin.com/raw/Kc5Wpt9s"))()
+		end,
+	},
+}
