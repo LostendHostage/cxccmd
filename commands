@@ -21,4 +21,13 @@ return {
 			loadstring(game:HttpGet("https://pastebin.com/raw/Kc5Wpt9s"))()
 		end,
 	},
+	["nohrp"] = {
+		["Args"] = 0,
+		["Function"] = function(speaker, args)
+			local c = game.Players.LocalPlayer.Character
+			    c.Parent = nil
+			    c:FindFirstChild("HumanoidRootPart"):Destroy()
+			    c.Parent = workspace
+		end,
+	},
 }
